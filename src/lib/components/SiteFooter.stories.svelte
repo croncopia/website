@@ -13,6 +13,6 @@
 	name="Default"
 	play={async ({ canvas }) => {
 		await expect(canvas.getByText('croncopia · public domain data')).toBeInTheDocument();
-		await expect(canvas.getByText('updated daily via github actions')).toBeInTheDocument();
+		await expect(canvas.getByText('updated hourly via github actions')).toBeInTheDocument();
 	}}
 />
