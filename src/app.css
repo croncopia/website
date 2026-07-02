@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+	/* page */
+	--color-paper: #fafaf7;
+	--color-ink: #1c1c1a;
+
+	/* text */
+	--color-body: #55554f;
+	--color-muted: #8a8a82;
+
+	/* lines & surfaces */
+	--color-line: #d8d8d2;
+	--color-line-soft: #ecece6;
+	--color-hover: #f1f1ea;
+
+	/* accents */
+	--color-accent: #2e7d32;
+	--color-accent-soft: #a5c9a5;
+	--color-selection: #c8e6c9;
+
+	/* terminal snippet */
+	--color-terminal-text: #d6f5d6;
+	--color-terminal-prompt: #7ba87b;
+}
+
+@layer base {
+	body {
+		background-color: var(--color-paper);
+		color: var(--color-ink);
+		font-family: var(--font-mono);
+		font-size: 13px;
+		line-height: 1.5;
+	}
+
+	::selection {
+		background-color: var(--color-selection);
+	}
+}
