@@ -67,6 +67,7 @@ export const docPages: DocPage[] = Object.entries(raws)
 			path: meta.path ?? '',
 			example: meta.example ?? '',
 			ids: meta.ids ?? '',
+			editUrl: `${GITHUB_EDIT_BASE}/${file.replace('./pages/', '')}`,
 			html: marked.parse(body, { async: false })
 		};
 	})

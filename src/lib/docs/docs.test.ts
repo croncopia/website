@@ -10,6 +10,9 @@ describe('docs module', () => {
 			expect(page.method).toBe('GET');
 			expect(page.path).toMatch(/^https:\/\/croncopia\.com\/api\//);
 			expect(page.example).toMatch(/^api\//);
+			expect(page.editUrl).toBe(
+				`https://github.com/croncopia/website/edit/main/src/lib/docs/pages/${page.slug}.md`
+			);
 			expect(page.html).toContain('<p>');
 		}
 	});

@@ -43,6 +43,11 @@
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -- our own markdown -->
 				{@html page.html}
 			</div>
+			<div class="mt-10 border-t border-line pt-4 text-xs">
+				<a href={page.editUrl} class="border-b border-accent-soft text-accent">
+					edit this page ↗
+				</a>
+			</div>
 		</main>
 		<aside class="border-t border-line bg-hover px-6 pt-8 pb-24 lg:border-t-0 lg:border-l">
 			{#key page.slug}
