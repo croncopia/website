@@ -1,0 +1,43 @@
+{
+  "name": "croncopia-com",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "npm run build && wrangler dev",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types ./src/worker-configuration.d.ts"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.2.1",
+    "@storybook/addon-a11y": "^10.4.6",
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/addon-svelte-csf": "^5.1.2",
+    "@storybook/addon-vitest": "^10.4.6",
+    "@storybook/sveltekit": "^10.4.6",
+    "@sveltejs/adapter-auto": "^7.0.1",
+    "@sveltejs/adapter-cloudflare": "^7.2.9",
+    "@sveltejs/kit": "^2.57.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^22.20.0",
+    "@vitest/browser-playwright": "^4.1.9",
+    "@vitest/coverage-v8": "^4.1.9",
+    "playwright": "^1.61.1",
+    "storybook": "^10.4.6",
+    "svelte": "^5.55.2",
+    "svelte-check": "^4.4.6",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.7",
+    "vitest": "^4.1.9",
+    "wrangler": "^4.107.0"
+  }
+}
