@@ -1,7 +1,7 @@
 ---
 title: List currencies
 group: Exchange Rates
-order: 3
+order: 4
 method: GET
 path: https://croncopia.com/api/exchange/index.json
 example: api/exchange/index.json

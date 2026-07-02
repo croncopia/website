@@ -1,7 +1,7 @@
 ---
 title: Get exchange rates
 group: Exchange Rates
-order: 2
+order: 3
 method: GET
 path: https://croncopia.com/api/exchange/{CODE}.json
 example: api/exchange/EUR.json

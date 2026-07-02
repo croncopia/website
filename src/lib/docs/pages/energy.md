@@ -1,7 +1,7 @@
 ---
 title: Get energy price
 group: Commodity Prices
-order: 4
+order: 6
 method: GET
 path: https://croncopia.com/api/energy/{series}.json
 example: api/energy/brent_crude.json

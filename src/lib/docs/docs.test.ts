@@ -4,14 +4,14 @@ import { requestSnippet, snippetLangs } from './snippets';
 
 describe('docs module', () => {
 	it('loads every markdown page with frontmatter applied', () => {
-		expect(docPages.length).toBeGreaterThanOrEqual(5);
+		expect(docPages.length).toBeGreaterThanOrEqual(7);
 		for (const page of docPages) {
 			expect(page.title).not.toBe('Untitled');
 			expect(page.method).toBe('GET');
-			expect(page.path).toMatch(/^https:\/\/croncopia\.com\/api\//);
+			expect(page.path).toMatch(/^https:\/\/(commodity\.|exchange\.)?croncopia\.com\//);
 			expect(page.example).toMatch(/^api\//);
 			expect(page.editUrl).toBe(
-				`https://github.com/croncopia/website/edit/main/src/lib/docs/pages/${page.slug}.md`
+				`https://github.com/croncopia/website/blob/main/src/lib/docs/pages/${page.slug}.md`
 			);
 			expect(page.html).toContain('<p>');
 		}
@@ -46,6 +46,13 @@ describe('docs module', () => {
 		expect(getDocPage('metals')?.ids).toBe('metals');
 		expect(getDocPage('exchange')?.ids).toBe('exchange');
 		expect(getDocPage('intro')?.ids).toBe('');
+	});
+
+	it('puts the source introductions first in their groups', () => {
+		const exchange = docGroups.find((g) => g.label === 'Exchange Rates');
+		const commodities = docGroups.find((g) => g.label === 'Commodity Prices');
+		expect(exchange?.pages[0].slug).toBe('exchange-source');
+		expect(commodities?.pages[0].slug).toBe('commodity-source');
 	});
 });
 

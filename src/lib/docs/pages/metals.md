@@ -1,7 +1,7 @@
 ---
 title: Get metal price
 group: Commodity Prices
-order: 5
+order: 7
 method: GET
 path: https://croncopia.com/api/metals/{series}.json
 example: api/metals/gold.json
