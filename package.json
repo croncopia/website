@@ -41,6 +41,8 @@
     "wrangler": "^4.107.0"
   },
   "dependencies": {
-    "currency-codes": "^2.2.0"
+    "currency-codes": "^2.2.0",
+    "highlight.js": "^11.11.1",
+    "marked": "^18.0.5"
   }
 }

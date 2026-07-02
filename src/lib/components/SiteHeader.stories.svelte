@@ -15,8 +15,9 @@
 		await expect(canvas.getByRole('heading', { level: 1, name: 'croncopia' })).toBeInTheDocument();
 		await expect(canvas.getByRole('link', { name: /github repo/ })).toHaveAttribute(
 			'href',
-			'https://github.com/'
+			'https://github.com/croncopia'
 		);
+		await expect(canvas.getByRole('link', { name: 'docs' })).toHaveAttribute('href', '/docs');
 		await expect(canvas.getByText(/curl https:\/\/croncopia\.com/)).toBeInTheDocument();
 	}}
 />

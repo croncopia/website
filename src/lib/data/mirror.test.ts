@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { match } from '../../params/feed';
+import { reroute } from '../../hooks';
 import { mirrorHeaders, upstreamUrl } from './mirror';
 
 describe('upstreamUrl', () => {
@@ -24,6 +25,21 @@ describe('upstreamUrl', () => {
 		expect(upstreamUrl('energy', '../secrets')).toBeNull();
 		expect(upstreamUrl('energy', 'a/b')).toBeNull();
 		expect(upstreamUrl('energy', '')).toBeNull();
+	});
+});
+
+describe('reroute hook', () => {
+	const rerouteFor = (path: string) =>
+		reroute({ url: new URL(`https://croncopia.com${path}`), fetch });
+
+	it('maps root feed paths onto the /api route', () => {
+		expect(rerouteFor('/energy/brent_crude.json')).toBe('/api/energy/brent_crude.json');
+		expect(rerouteFor('/exchange/USD.json')).toBe('/api/exchange/USD.json');
+	});
+
+	it('leaves non-feed paths alone', () => {
+		expect(rerouteFor('/docs/intro')).toBeUndefined();
+		expect(rerouteFor('/')).toBeUndefined();
 	});
 });
 

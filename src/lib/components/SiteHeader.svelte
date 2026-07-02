@@ -29,6 +29,7 @@
 		<span>curl {exampleEndpoint}</span>
 	</div>
 	<div class="flex flex-wrap gap-5 text-xs">
+		<a href="/docs" class="border-b border-accent-soft text-accent">docs</a>
 		<a href={repoUrl} class="border-b border-accent-soft text-accent">github repo ↗</a>
 		{#if dummyNote}
 			<span class="text-muted">{dummyNote}</span>

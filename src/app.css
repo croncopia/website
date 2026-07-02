@@ -24,6 +24,8 @@
 	/* terminal snippet */
 	--color-terminal-text: #d6f5d6;
 	--color-terminal-prompt: #7ba87b;
+	--color-terminal-soft: #e8e8e2;
+	--color-terminal-number: #e0c98f;
 }
 
 @layer base {
@@ -37,5 +39,105 @@
 
 	::selection {
 		background-color: var(--color-selection);
+	}
+}
+
+/* highlight.js tokens inside the dark code panels (src/lib/docs/highlight.ts) */
+@layer components {
+	.hljs-attr {
+		color: var(--color-terminal-text);
+	}
+	.hljs-string {
+		color: var(--color-accent-soft);
+	}
+	.hljs-number,
+	.hljs-literal {
+		color: var(--color-terminal-number);
+	}
+	.hljs-keyword,
+	.hljs-meta {
+		color: var(--color-terminal-prompt);
+	}
+	.hljs-built_in,
+	.hljs-title,
+	.hljs-type {
+		color: var(--color-terminal-soft);
+	}
+	.hljs-comment {
+		color: var(--color-muted);
+	}
+}
+
+/* Rendered markdown on /docs pages (src/lib/docs) */
+@layer components {
+	.docs-prose {
+		max-width: 560px;
+		color: var(--color-body);
+	}
+	.docs-prose h2 {
+		margin: 28px 0 8px;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: var(--color-ink);
+	}
+	.docs-prose p {
+		margin: 0 0 16px;
+	}
+	.docs-prose a {
+		color: var(--color-accent);
+		border-bottom: 1px solid var(--color-accent-soft);
+	}
+	.docs-prose code {
+		background-color: var(--color-hover);
+		border-radius: 3px;
+		padding: 1px 5px;
+		font-size: 12px;
+	}
+	.docs-prose pre {
+		margin: 0 0 16px;
+		background-color: var(--color-ink);
+		color: var(--color-terminal-text);
+		border-radius: 6px;
+		padding: 14px 16px;
+		font-size: 12px;
+		line-height: 1.6;
+		overflow-x: auto;
+	}
+	.docs-prose pre code {
+		background: transparent;
+		padding: 0;
+	}
+	.docs-prose table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 12.5px;
+		margin: 0 0 28px;
+	}
+	.docs-prose th {
+		text-align: left;
+		font-weight: 400;
+		font-size: 11px;
+		color: var(--color-muted);
+		padding: 4px 12px 6px 0;
+		border-bottom: 1px solid var(--color-line);
+	}
+	.docs-prose td {
+		padding: 8px 12px 8px 0;
+		border-bottom: 1px solid var(--color-line-soft);
+		vertical-align: top;
+	}
+	.docs-prose td:first-child {
+		font-weight: 600;
+		white-space: nowrap;
+	}
+	.docs-prose ul {
+		margin: 0 0 16px;
+		padding-left: 18px;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		list-style: disc;
 	}
 }

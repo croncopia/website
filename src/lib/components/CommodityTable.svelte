@@ -15,10 +15,17 @@
 </script>
 
 <section class="flex flex-col gap-2">
-	<div class="flex items-baseline gap-2.5">
-		<h2 class="text-[13px] font-bold tracking-[1px] uppercase">{title}</h2>
+	<div class="flex items-baseline justify-between gap-2.5 flex-wrap">
+		<div class="flex items-baseline gap-2.5 flex-wrap">
+			<h2 class="text-[13px] font-bold tracking-[1px] uppercase">{title}</h2>
+			<span class="text-[11px] text-muted">
+				{pathLabel} · {series.length} series
+			</span>
+		</div>
 		<span class="text-[11px] text-muted">
-			{pathLabel} · {series.length} series{#if lastUpdated}&nbsp;· updated {lastUpdated}{/if}
+			{#if lastUpdated}
+				updated {lastUpdated}
+			{/if}
 		</span>
 	</div>
 	<table class="w-full border-collapse text-[12.5px]">
