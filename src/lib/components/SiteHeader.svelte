@@ -7,8 +7,8 @@
 	}
 
 	let {
-		repoUrl = 'https://github.com/',
-		exampleEndpoint = 'https://croncopia.com/energy/brent_crude.json',
+		repoUrl = 'https://github.com/croncopia',
+		exampleEndpoint = 'https://croncopia.com/api/energy/brent_crude.json',
 		dummyNote
 	}: Props = $props();
 </script>
