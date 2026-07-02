@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>croncopia — free, open market data</title>
+	<title>croncopia — free, open source data</title>
 	<meta
 		name="description"
 		content="Free, open exchange rates and commodity prices served as plain JSON. No keys, no rate limits."

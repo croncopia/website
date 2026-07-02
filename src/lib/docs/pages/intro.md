@@ -7,7 +7,7 @@ path: https://croncopia.com/api/{category}/{id}.json
 example: api/energy/brent_crude.json
 ---
 
-Croncopia serves free, open market data as plain JSON, refreshed hourly by GitHub Actions. There is no authentication, no API keys, and no rate limiting — every endpoint is a static file you can fetch directly from a browser or any backend.
+Croncopia serves free, open source data as plain JSON, refreshed hourly by GitHub Actions. There is no authentication, no API keys, and no rate limiting — every endpoint is a static file you can fetch directly from a browser or any backend.
 
 ## path parameters
 

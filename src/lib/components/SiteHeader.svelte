@@ -16,7 +16,7 @@
 <header class="mb-9 flex flex-col gap-3 border-b border-line pb-7">
 	<div class="flex flex-wrap items-baseline gap-4">
 		<h1 class="text-[22px] font-bold tracking-[-0.5px]">croncopia</h1>
-		<span class="text-muted">free, open market data · no keys · no rate limits</span>
+		<span class="text-muted">free, open source data · no keys · no rate limits</span>
 	</div>
 	<p class="max-w-[640px] text-body">
 		Exchange rates and commodity prices fetched and aggregated by GitHub Actions, served as plain
