@@ -36,7 +36,7 @@ export interface DocGroup {
 	pages: DocPage[];
 }
 
-const GITHUB_EDIT_BASE = 'https://github.com/croncopia/website/edit/main/src/lib/docs/pages';
+const GITHUB_EDIT_BASE = 'https://github.com/croncopia/website/blob/main/src/lib/docs/pages';
 
 const raws = import.meta.glob('./pages/*.md', {
 	eager: true,
